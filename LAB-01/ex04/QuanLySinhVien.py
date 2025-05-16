@@ -23,6 +23,7 @@ class QuanLySinhVien:
         major = input("Nhap chuyen nganh cua sinh vien: ")
         diemTB = float(input("Nhap diem cua sinh vien: "))
         sv = SinhVien(svID, name, sex, major, diemTB)
+        self.xepLoaiHocLuc(sv)
         self.listSinhVien.append(sv)
 
     def updateSinhVien(self, ID):
@@ -30,7 +31,7 @@ class QuanLySinhVien:
         if (sv != None):
             name = input("Nhap ten sinh vien: ")
             sex = input("Nhap gioi tinh sinh vien: ")
-            major = input("Nhap chuyen nganh cua sinh vien: ")
+            major = int(input("Nhap chuyen nganh cua sinh vien: "))
             diemTB = float(input("Nhap diem cua sinh vien: "))
             sv._name = name
             sv._sex = sex
